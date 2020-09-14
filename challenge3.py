@@ -118,13 +118,13 @@ class Overload:
     def __init__(self, x):
         self.x = x
 
-    def __add__(self, other):
-        x = self.x * other.x
+    def __mul__(self, other):
+        x = self.x + other.x
         return x
 
 
 # Create instance of Overload
 x = Overload(5)
 y = Overload(6)
-# Print x + y, should display x * y
-print(x + y)
+# Print x * y, should display x + y
+print(x * y)
